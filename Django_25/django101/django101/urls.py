@@ -14,10 +14,14 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
-]
+urlpatterns = (
+    path("admin/", admin.site.urls),
+    # prefix "" for all URLs in'django101.tasks.urls'
+    path("", include("django101.tasks.urls")),
+    # prefix "ala-bala" for all URLs in'django101.tasks.urls'
+    path("ala-bala", include("django101.tasks.urls")),
+)
 
 # https://HOST:PORT/FULL/PATH?query=params&othe=othe_params#fragment

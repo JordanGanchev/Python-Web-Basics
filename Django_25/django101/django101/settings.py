@@ -79,7 +79,22 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    },
+    
+    # 'postgresql': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    
+          # Database name 
+    #     'NAME': 'tasks_db',
+    
+          # Credential  
+    #     'USER': 'postgres',
+    #     'PASSWORD': '1123QwER',
+    
+          # Server  
+    #     'HOST': 'localhost',  # 127.0.0.1  # Not host.docker.internal
+    #     'PORT': '5432',
+    # }
 }
 
 
@@ -125,3 +140,21 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#     'handlers': {
+#         'console': {
+#             'level': 'DEBUG',
+#             'class': 'logging.StreamHandler',
+#         },
+#     },
+#     'loggers': {
+#         'django.db.backends': {
+#             'handlers': ['console'],
+#             'level': 'DEBUG',
+#             'propagate': False,
+#         }
+#     }
+# }

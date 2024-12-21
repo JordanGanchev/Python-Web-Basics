@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+<body>
+    <h1>{{ title }}</h1>
+    {% if tasks_count == 0 %}
+        <h2>No Tasks</h2>
+    {% else %}
+        <h2>Tasks: {{ task_list_count }}</h2>
+    {% endif %}
+
+    <form action="/" method="get">
+        <input type="'text" value="{{ title_filter }}" />
+    </form>
+
+    {% for task in tasks%}
+        <li>
+            <h2>{{ task.title}}</h2>
+            <p>{{ task.description}}</p>
+        </li>
+    {% endfor%}
+
+</body>
+</html>
