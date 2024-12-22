@@ -1,4 +1,4 @@
-"""django101 URL Configuration
+"""urls_views_demos URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
@@ -15,15 +15,23 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from urls_views_demos.departments.views import index, index2, department_1_details, department_2_details, \
+    departments_details, departments_details_by_name
 
-urlpatterns = (
-    path("admin/", admin.site.urls),
-    # prefix "" for all URLs in'django101.tasks.urls'
-    path("", include("django101.tasks.urls")),
-    # prefix "ala-bala" for all URLs in'django101.tasks.urls'
-    path("ala-bala", include("django101.tasks.urls")),
-)
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path("", include('urls_views_demos.departments.urls')),
+]
 
-# https://HOST:PORT/FULL/PATH?query=params&othe=othe_params#fragment
+'''
+When creating new Django App
+1. Add the Django App in ;INSTALL_APPS'
+2. Create 'urls.py' in the Django App
 
-# https://github.com/Minkov/python-web-basics-demos  !!
+'''
+
+'''
+# Diff between 'path' and 'str' in urls:
+department/gosh/pesho -> path
+department/gosho -> str
+'''
