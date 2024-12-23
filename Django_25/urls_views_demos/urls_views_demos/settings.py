@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     'urls_views_demos.departments',
+    'urls_views_demos.core',
 ]
 
 MIDDLEWARE = [

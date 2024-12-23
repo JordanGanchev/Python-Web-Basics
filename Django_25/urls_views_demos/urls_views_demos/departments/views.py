@@ -24,3 +24,12 @@ def departments_create(request):
 
 def departments_details_by_name(request, name):
     return HttpResponse(f"Department with name: {name}")
+
+#---------------------------------------------------------
+# Function base view
+
+# def index(request):
+#     return HttpResponse("It work")
+#
+# def index(request, *args, **kwargs):
+#     return HttpResponse(f"It work with args={args} and kwargs={kwargs}")

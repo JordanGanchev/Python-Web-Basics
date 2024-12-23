@@ -18,16 +18,24 @@ from django.urls import path, include
 from urls_views_demos.departments.views import index, index2, department_1_details, department_2_details, \
     departments_details, departments_details_by_name
 
-urlpatterns = [
+urlpatterns = (
     path('admin/', admin.site.urls),
-    path("", include('urls_views_demos.departments.urls')),
-]
+    path('', include('urls_views_demos.core.urls')),
+    path("departments/", include('urls_views_demos.departments.urls')),
+
+    # path("employees", include([
+    #     path('', include('urls_views_demos.core')),
+    #     path("asd/", index),
+    #     path("asd2/", department_2_details)
+    # ])
+    #      ),
+)
 
 '''
 When creating new Django App
 1. Add the Django App in ;INSTALL_APPS'
 2. Create 'urls.py' in the Django App
-
+3. Include the Django App`s 'urls.py' in global 'urls.py'
 '''
 
 '''

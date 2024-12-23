@@ -5,6 +5,6 @@ from urls_views_demos.departments.views import departments_details, departments_
 urlpatterns = (
     # path("departments/1/", department_1_details),
     # path("departments/2/", department_2_details),
-    path("departments/<int:pk>/", departments_details),
-    path("departments/<str:name>/", departments_details_by_name),
+    path("<int:pk>/", departments_details),
+    path("<str:name>/", departments_details_by_name),
 )
