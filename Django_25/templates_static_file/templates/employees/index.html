@@ -72,5 +72,24 @@
         {% endfor %}
     </ul>
     <a href="{% url 'employee_details' pk=7 %}">Go to employee</a>
+
+    <hr>
+
+    <h1>CSRF token</h1>
+
+    {{ csrf_token }}
+
+    {% csrf_token %}]
+
+    {#{% navigation %}#}
+
+    <hr>
+
+    {% lorem %}
+
+    <hr>
+
+    {% lorem 3 %}
+
 </body>
 </html>
